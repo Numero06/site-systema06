@@ -1,0 +1,497 @@
+/* Réglages généraux */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #041827;
+    color: #f7fafc;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.15;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Menu */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(4, 24, 39, 0.95);
+    border-bottom: 1px solid rgba(0, 168, 232, 0.35);
+    backdrop-filter: blur(10px);
+}
+
+nav {
+    width: min(1120px, 90%);
+    min-height: 76px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.nom-club {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.menu a {
+    color: #bdebff;
+}
+
+.menu a:hover {
+    color: #00a8e8;
+}
+
+
+/* Écran d’accueil */
+
+.accueil {
+    width: min(1120px, 90%);
+    min-height: 78vh;
+    margin: auto;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:
+        radial-gradient(
+            circle at 80% 35%,
+            rgba(0, 168, 232, 0.2),
+            transparent 26%
+        );
+}
+
+.surtitre {
+    margin-bottom: 14px;
+    color: #00a8e8;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+h1 {
+    max-width: 900px;
+    margin-bottom: 24px;
+    font-size: clamp(2.7rem, 7vw, 6rem);
+    text-transform: uppercase;
+}
+
+.introduction {
+    max-width: 720px;
+    margin-bottom: 32px;
+    color: #c8dbe6;
+    font-size: 1.2rem;
+}
+
+.bouton {
+    width: fit-content;
+    padding: 14px 24px;
+    background-color: #00a8e8;
+    color: #041827;
+    border-radius: 8px;
+    font-weight: 800;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.bouton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 24px rgba(0, 168, 232, 0.5);
+}
+
+
+/* Sections communes */
+
+main > section:not(.accueil) {
+    width: min(1120px, 90%);
+    margin: 30px auto;
+    padding: 70px;
+    border-radius: 22px;
+}
+
+h2 {
+    margin-bottom: 24px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+section > p {
+    max-width: 850px;
+    font-size: 1.1rem;
+}
+
+
+/* Présentation claire */
+
+#systema {
+    background-color: #edf8fc;
+    color: #041827;
+}
+
+#systema p {
+    color: #274453;
+}
+
+
+/* Quatre piliers */
+
+#piliers {
+    background-color: #082235;
+    border: 1px solid rgba(0, 168, 232, 0.35);
+}
+
+.piliers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.piliers article {
+    padding: 28px 22px;
+    background-color: #0b2a3d;
+    border-top: 3px solid #00a8e8;
+    border-radius: 14px;
+}
+
+.piliers h3 {
+    color: #bdebff;
+    font-size: 1.3rem;
+}
+
+.piliers p {
+    margin-bottom: 0;
+    color: #d4e3eb;
+}
+
+
+/* Ce que vous apprendrez */
+
+.apprentissages {
+    background:
+        radial-gradient(
+            circle at 95% 15%,
+            rgba(0, 168, 232, 0.25),
+            transparent 28%
+        ),
+        #0b2a3d;
+    border: 2px solid #00a8e8;
+    box-shadow: 0 0 30px rgba(0, 168, 232, 0.12);
+}
+
+.apprentissages p:not(.surtitre) {
+    color: #e2edf2;
+}
+
+
+/* Contact */
+
+#contact {
+    background-color: #edf8fc;
+    color: #041827;
+    text-align: center;
+}
+
+#contact p {
+    margin-right: auto;
+    margin-left: auto;
+    color: #274453;
+}
+
+
+/* Téléphones et tablettes */
+
+@media (max-width: 850px) {
+    nav {
+        padding: 18px 0;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .menu {
+        gap: 12px 18px;
+    }
+
+    .accueil {
+        min-height: 70vh;
+        padding: 70px 0;
+    }
+
+    main > section:not(.accueil) {
+        padding: 42px 26px;
+    }
+
+    .piliers {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 540px) {
+    .menu {
+        font-size: 0.9rem;
+    }
+
+    .piliers {
+        grid-template-columns: 1fr;
+    }
+
+    main > section:not(.accueil) {
+        width: 92%;
+        padding: 36px 22px;
+    }
+}
+/* Accueil avec logo */
+
+.accueil {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(240px, 0.7fr);
+    align-items: center;
+    gap: 60px;
+}
+
+.accueil-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.accueil-logo img {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 28px rgba(0, 168, 232, 0.3));
+}
+
+
+/* Galerie */
+
+#galerie {
+    background-color: #edf8fc;
+    color: #041827;
+}
+
+#galerie > p:not(.surtitre) {
+    color: #274453;
+}
+
+.galerie-grille {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.galerie-grille img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border: 2px solid #00a8e8;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(4, 24, 39, 0.16);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.galerie-grille img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(4, 24, 39, 0.24);
+}
+
+
+/* Adaptation aux tablettes */
+
+@media (max-width: 850px) {
+    .accueil {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .accueil-logo {
+        order: -1;
+    }
+
+    .accueil-logo img {
+        max-width: 260px;
+    }
+
+    .galerie-grille {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Adaptation aux téléphones */
+
+@media (max-width: 540px) {
+    .galerie-grille {
+        grid-template-columns: 1fr;
+    }
+
+    .galerie-grille img {
+        height: 230px;
+    }
+} 
+section {
+    scroll-margin-top: 100px;
+}
+@media (max-width: 850px) {
+    section {
+        scroll-margin-top: 210px;
+    }
+}
+h1 {
+    font-size: clamp(2.2rem, 5vw, 2.5rem);
+}
+/* Vignettes dans la présentation du Systema */
+
+.systema-introduction {
+    max-width: 950px;
+    margin-bottom: 25px;
+    font-size: 1.18rem;
+}
+
+.systema-bloc {
+    margin: 0;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 330px;
+    align-items: center;
+    gap: 35px;
+    border-bottom: 1px solid rgba(4, 24, 39, 0.14);
+}
+
+.systema-bloc:last-child {
+    border-bottom: none;
+}
+
+.systema-texte h3 {
+    margin: 0 0 12px;
+    color: #041827;
+    font-size: 1.35rem;
+}
+
+.systema-texte p {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #274453;
+}
+
+.systema-photo {
+    display: block;
+    width: 330px;
+    height: 218px;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #00a8e8;
+    border-radius: 12px;
+    box-shadow: 0 7px 18px rgba(4, 24, 39, 0.18);
+}
+
+/* Adapte le cadre à la deuxième photo verticale */
+
+.systema-photo[src$="training-2.jpg"] {
+    width: 220px;
+    height: auto;
+    object-fit: initial;
+    justify-self: center;
+    background-color: transparent;
+}
+
+/* Affiche entièrement la troisième photo */
+
+.systema-photo[src$="training-3.jpg"] {
+    height: auto;
+    object-fit: initial;
+}
+
+
+/* Affichage sur téléphone */
+
+@media (max-width: 650px) {
+    .systema-bloc {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 24px 0;
+    }
+
+    .systema-photo {
+        width: 270px;
+        height: 180px;
+        justify-self: start;
+    }
+}
+/* Taille du titre de la rubrique des deux écoles */
+
+#ecoles .surtitre {
+    font-size: 1.4rem !important;
+    line-height: 1.4;
+    margin-bottom: 24px;
+}
+/* Vignettes de la rubrique Ce que vous apprendrez */
+
+.apprentissages-images {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(150px, 1fr)
+    );
+    gap: 18px;
+}
+
+.apprentissages-images img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 2px solid #00a8e8;
+    border-radius: 12px;
+    box-shadow: 0 7px 18px rgba(4, 24, 39, 0.2);
+}
+
+
+/* Affichage sur téléphone */
+
+@media (max-width: 650px) {
+    .apprentissages-images {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .apprentissages-images img {
+        border-radius: 9px;
+    }
+}
