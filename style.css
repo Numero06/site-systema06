@@ -756,3 +756,10 @@ h1 {
         background: #cfdee5 !important;
     }
 }
+/* Cadrage mobile de la deuxième photo */
+
+@media (max-width: 650px) {
+    .systema-photo[src$="Training-2.jpg"] {
+        object-position: center 15%;
+    }
+}
