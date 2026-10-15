@@ -724,3 +724,35 @@ h1 {
         font-size: 1rem;
     }
 }
+/* Fond clair de la rubrique Deux approches complémentaires */
+
+#ecoles {
+    background-color: #cfdee5;
+    color: #173542;
+    border-radius: 32px;
+}
+
+#ecoles p {
+    color: #294854 !important;
+}
+
+#ecoles .surtitre {
+    color: #102530 !important;
+}
+
+/* Fond identique pour les deux rubriques */
+
+#systema,
+#ecoles {
+    background: #eaf4f7 !important;
+}
+
+
+/* Fond légèrement plus foncé sur téléphone */
+
+@media (max-width: 650px) {
+    #systema,
+    #ecoles {
+        background: #cfdee5 !important;
+    }
+}
